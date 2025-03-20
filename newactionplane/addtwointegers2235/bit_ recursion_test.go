@@ -2,7 +2,7 @@ package addtwointegers2235
 
 import "testing"
 
-func TestSum2(t *testing.T) {
+func Test_sum3(t *testing.T) {
 	tests := []struct {
 		num1     int
 		num2     int
@@ -17,9 +17,8 @@ func TestSum2(t *testing.T) {
 		{-100, 100, 0},
 		{9223372036854775807, 1, -9223372036854775808},
 	}
-
 	for _, test := range tests {
-		result := sum2(test.num1, test.num2)
+		result := sum3(test.num1, test.num2)
 		if result != test.expected {
 			t.Errorf("sum2(%d, %d) = %d; expected %d", test.num1, test.num2, result, test.expected)
 		}
